@@ -2,9 +2,9 @@
 	// Declare and instantiate variables (optional)
 
 	//get the user data from the form
-	$product_description = $_POST["product_description"];
-	$list_price = $_POST["list_price"];
-	$discount_percent = $_POST["discount_percent"];
+	$product_description = $_GET["product_description"];
+	$list_price = $_GET["list_price"];
+	$discount_percent = $_GET["discount_percent"];
 	
 	//calculate the discount
 	$discount = $list_price * $discount_percent * 0.01;
@@ -24,8 +24,10 @@
 <html>
 <head>
     <title>Product Discount Calculator</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+   <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
+      
+
 <body>
     <div id="content">
         <h1>This page is under construction</h1>

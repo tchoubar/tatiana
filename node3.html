@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/* Replace image using childnode property */
+
+function changeNode() {
+	var dancing = document.getElementById('last');
+	dancing.parentNode.removeChild(dancing);
+}
+
+</script>
+</head>
+<body>
+<span id="top"><img src="images/evilHomer_L.gif">
+	<img src="images/evilHomer_L.gif">
+	<img src="images/evilHomer_R.gif" id="last">
+</span>
+<button onclick="changeNode();">Execute</button>
+
+<br/>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="utf-8" />
+
+   <title>Dynamic List using JavaScript</title>
+<script>
+	function addShow() {
+		//Get Input from User
+		var text = document.getElementById("getInput").value;
+		//Create new DOM list node
+		var node = document.createElement("li");
+		//Add new show text to DOM list node
+		node.innerHTML = text;
+		//Append new show at end of list
+		document.getElementById("theList").appendChild(node);
+		//Append
+		var place = document.getElementById("8F18");
+		document.getElementById("theList").insertBefore(node,place);
+	}
+	
+
+</script>
+
+
+</head>
+
+<body>
+
+<h2>Matt Groening's top favorite Simpson episodes</h2>
+
+   <ol id="theList">
+
+       <li id="7F06">Bart the Daredevil</li>
+
+       <li id="7G11">Life on the Fast Lane</li>
+
+       <li id="3F20">Much Apu About Nothing</li>
+
+       <li id="8F18">A Streetcar Named Marge</li>
+
+       <li id="4F18">In Marge We Trust</li>
+
+       <li id="4F19">Homer&lsquo;s Enemy</li>
+
+       <li id="4F02">Treehouse of Horror VII</li>
+
+       <li id="5F18">Natural Born Kissers</li>
+
+       <li id="7G12">Krusty Gets Busted</li>
+
+       <li id="7G04">There&lsquo;s No Disgrace Like Home</li>
+
+   </ol>
+
+ <fieldset>
+
+   <legend>List Manager</legend>
+
+   <form>
+
+       <label for="getInput">Title:</label>
+
+       <input type="text" id="getInput" />
+
+       <button type="button" onclick="addElement();">Add</button>
+       <button type="button" onclick="addShow()";>Add Show</button>
+
+       <button type="reset">Reset</button>
+
+   </form>
+
+   </fieldset>
+
+
+
+      <fieldset>
+
+   <legend>Display Manager</legend>
+
+       <label for="color1">Color #1:</label>
+
+       <input type="color" id="color1" value="yellow"><br />
+
+       <label for="color2">Color #2:</label>
+
+       <input type="color" id="color2" value="limeGreen"><br />
+
+       <button type="button" onclick="setColor(color1,color2);">Color</button>
+
+   </fieldset>
+
+
+
+</body>
+
+</html>
+

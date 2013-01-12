@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<title>Homer’s Online Music Shop</title>
+
+<link rel="shortcut icon" href="images/homer.ico" />
+
+<link rel="stylesheet" href="css/main.css" />
+
+<link rel="stylesheet" href="css/nav.css" />
+
+
+
+<!-- styling canvas -->
+
+<style>
+
+canvas {
+
+border: 1px solid black;
+
+background: url('images/ninja_dodgeball.jpg') center top no-repeat;
+
+}
+
+</style>
+
+<!-- canvas object methods -->
+
+<script>
+
+
+
+//Declare Variables
+
+var ctx;
+
+var canvasWidth = 600;
+
+var canvasHeight = 450;
+
+var circle_x = 300;
+
+var circle_y = 225;
+
+var speed_dx = 2;
+
+var speed_dy = 4;
+
+
+
+//Access rendering context
+
+function init() {
+
+ctx = document.getElementById("canvas").getContext("2d");
+
+setInterval(draw, 10);
+
+} // end init
+
+
+
+//Execute drawing function
+
+function draw() {
+
+//Clear canvas
+
+ctx.clearRect(0,0,canvasWidth,canvasHeight);
+
+
+
+//Draw image
+
+//declare variable for image function
+
+var img = new Image();
+
+// specifies the location of the image
+
+img.src = 'images/homer_dodgeball1.png';
+
+// draw image at specified location
+
+ctx.drawImage(img,172,197);
+
+
+
+//Draw ball
+
+//create a circle with a radius of 25 pixels
+
+ctx.beginPath();
+
+ctx.arc(circle_x, circle_y, 25, 0, Math.PI*2, true);
+
+ctx.fillStyle = "rgb(255,0,0)"
+
+ctx.fill();
+
+
+
+//move the circle
+
+if (circle_x + speed_dx > canvasWidth || circle_x + speed_dx < 0)
+
+speed_dx = -speed_dx;
+
+if (circle_y + speed_dy > canvasHeight || circle_y + speed_dy < 0)
+
+speed_dy = -speed_dy;
+
+
+
+circle_x += speed_dx;
+
+circle_y += speed_dy;
+
+} // end Draw image
+
+
+
+// add onload event
+
+window.onload = function() {
+
+init();
+
+}
+
+</script>
+
+
+
+</head>
+
+<<body>
+
+<header>
+
+<img src="images/Homer_Rock_and_Roll.jpg" alt="Homer" width="100" height="100" />
+
+<hgroup>
+
+<h1>Homer's Music Store</h1>
+
+<h2>Rock On!</h2>
+
+</hgroup>
+
+
+
+<nav>
+
+<ul id="main">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="multi_column.html">Layout</a>
+
+<ul>
+
+<li><a href="two_column_left.html">2 Column Float Left</a></li>
+
+<li><a href="two_column_right.html">2 Column Float Right</a></li>
+
+<li><a href="three_column.html">3 Column Float</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="table.html">Tables</a>
+
+<ul>
+
+<li><a href="dynamic_table.html">Dynamic</a></li>
+
+<li><a href="web_sql.html">Database</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="slideshow.html">Slide Show</a>
+
+<ul>
+
+<li><a href="accordion.html">Accordion</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="video.html">Multimedia</a>
+
+<ul>
+
+<li><a href="audio.html">Audio</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="email_form.html">Forms</a>
+
+<ul>
+
+<li><a href="product_discount.html">Product Discount</a></li>
+
+<li><a href="invoice_total.html">Invoice total</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="product.php">Products</a></li>
+
+<li><a href="images.html">Graphics</a>
+
+<ul>
+
+<li><a href="rollover.html">Rollover</a></li>
+
+<li><a href="svg.html">SVG</a></li>
+
+<li><a href="canvas.html">Canvas</a></li>
+
+<li><a href="geolocation.html">Geolocation</a></li>
+
+<li><a href="cube.html">Animation</a></li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</nav>
+
+
+
+</header>
+
+
+
+<section id="container">
+
+<header id="top">
+
+<h1>Everything Is On Sale for Halloween</h1>
+
+</header>
+
+<!-- Content Starts Here -->
+
+<h2> Homer at Ninja Dodgeball Fest I in Canvas</h2>
+
+
+
+<canvas id="canvas" width="600" height="450"></canvas>
+
+
+
+<!-- Content Ends Here -->
+
+</section>
+
+
+
+<footer>
+
+<p>&copy; 2012 Homer J. Simpson</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
+

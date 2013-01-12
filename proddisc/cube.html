@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<title>Homer’s Online Music Shop</title>
+
+<link rel="shortcut icon" href="images/homer.ico" />
+
+<link rel="stylesheet" href="css/main.css" />
+
+<link rel="stylesheet" href="css/nav.css" />
+
+
+
+
+
+
+
+<style>
+
+section {
+
+height: 500px; /* Compensate for cube */
+
+}
+
+
+
+#cube {
+
+position: relative;
+
+left: 75px;
+
+top: 50px;
+
+}
+
+
+
+#spinner div {
+
+position: absolute;
+
+width: 360px;
+
+height: 360px;
+
+border: 1px solid gray;
+
+background: white;
+
+text-align: center;
+
+line-height: 360px;
+
+font-size: 300px;
+
+}
+
+/* #spinner{
+
+-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+
+-webkit-backface-visibility: hidden;
+
+}*/
+
+
+
+#face1 {
+
+-webkit-transform: translateZ(180px);
+
+}
+
+#face2 {
+
+-webkit-transform: rotateY(90deg) translateZ(180px);
+
+}
+
+#face3 {
+
+-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(180px);
+
+}
+
+#face4 {
+
+-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(180px);
+
+}
+
+#face5 {
+
+-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(180px);
+
+}
+
+#face6 {
+
+-webkit-transform: rotateX(-90deg) translateZ(180px);
+
+}
+
+
+
+@-webkit-keyframes spincube {
+
+16% {
+
+-webkit-transform: rotateY(-90deg);
+
+}
+
+33% {
+
+-webkit-transform: rotateY(-90deg) rotateZ(90deg);
+
+}
+
+50% {
+
+-webkit-transform: rotateY(180deg) rotateZ(90deg);
+
+}
+
+66% {
+
+-webkit-transform: rotateY(90deg) rotateX(90deg);
+
+}
+
+83% {
+
+-webkit-transform: rotateX(90deg);
+
+}
+
+}
+
+
+
+#spinner {
+
+-webkit-animation-name: spincube;
+
+-webkit-animation-timing-function: ease-in-out;
+
+-webkit-animation-iteration-count: infinite;
+
+-webkit-animation-duration: 12s;
+
+-webkit-transform-style: preserve-3d;
+
+-webkit-transform-origin: 180px 180px 0px;
+
+}
+
+
+
+
+
+/* Album Covers */
+
+div #spinner div {
+
+background-size: 100% 100%;
+
+background-repeat: no-repeat;
+
+}
+
+
+
+div #face1 {
+
+background-image: url('images/movie_soundtrack.jpg');
+
+}
+
+
+
+div #face2 {
+
+background-image: url('images/testify.jpg');
+
+}
+
+
+
+div #face3 {
+
+background-image: url('images/songs_in_the_key_of_springfield.jpg');
+
+}
+
+
+
+div #face4 {
+
+background-image: url('images/the_yellow_album.png');
+
+}
+
+
+
+div #face5 {
+
+background-image: url('images/sing_the_blues.gif');
+
+}
+
+
+
+div #face6 {
+
+background-image: url('images/go_simpsonic.jpg');
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/Homer_Rock_and_Roll.jpg" alt="Homer" width="100" height="100" />
+
+<hgroup>
+
+<h1>Homer's Music Store</h1>
+
+<h2>Rock On!</h2>
+
+</hgroup>
+
+
+
+<nav>
+
+<ul id="main">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="multi_column.html">Layout</a>
+
+<ul>
+
+<li><a href="two_column_left.html">2 Column Float Left</a></li>
+
+<li><a href="two_column_right.html">2 Column Float Right</a></li>
+
+<li><a href="three_column.html">3 Column Float</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="table.html">Tables</a>
+
+<ul>
+
+<li><a href="dynamic_table.html">Dynamic</a></li>
+
+<li><a href="web_sql.html">Database</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="slideshow.html">Slide Show</a>
+
+<ul>
+
+<li><a href="accordion.html">Accordion</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="video.html">Multimedia</a>
+
+<ul>
+
+<li><a href="audio.html">Audio</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="email_form.html">Forms</a>
+
+<ul>
+
+<li><a href="product_discount.html">Product Discount</a></li>
+
+<li><a href="invoice_total.html">Invoice total</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="product.php">Products</a></li>
+
+<li><a href="images.html">Graphics</a>
+
+<ul>
+
+<li><a href="rollover.html">Rollover</a></li>
+
+<li><a href="svg.html">SVG</a></li>
+
+<li><a href="canvas.html">Canvas</a></li>
+
+<li><a href="geolocation.html">Geolocation</a></li>
+
+<li><a href="cube.html">Animation</a></li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</nav>
+
+
+
+</header>
+
+
+
+<section id="container">
+
+<header id="top">
+
+<h1>Everything Is On Sale for Halloween</h1>
+
+</header>
+
+<!-- Content Starts Here -->
+
+
+
+<div id="cube">
+
+<div id="spinner">
+
+<div id="face1"></div>
+
+<div id="face2"></div>
+
+<div id="face3"></div>
+
+<div id="face4"></div>
+
+<div id="face5"></div>
+
+<div id="face6"></div>
+
+</div>
+
+</div>
+
+<!-- Content Ends Here -->
+
+</section>
+
+
+
+<footer>
+
+<p>&copy; 2012 Homer J. Simpson</p>
+
+</footer>
+
+</body>
+
+</html>
+

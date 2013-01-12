@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<style>
+		canvas {
+		border: 1px solid black;
+		}
+	</style>
+
+<script>
+//Access rendering context
+function init() {
+	//Get Context
+	var ctx = document.getElementById('canvas').getContext('2d');
+	
+	/* Draw [shape] */
+	/* Draw a Squiggly Line */
+	
+	
+	//Starts the drawing
+	ctx.beginPath();
+	//Set the starting point
+	ctx.moveTo(100,20);
+	//Draw straight line 1 from starting point to second point
+	ctx.lineTo(200,160);
+	//Draw quadratic curve
+	ctx.quadraticCurveTo(230, 200, 250, 120);
+	//Draw quadratic curve
+	ctx.bezierCurveTo(230, 200, 250, 120);
+	//Draw straight line 2 from starting point to second point
+	ctx.lineTo(500,90);
+	//Set line width and color
+	ctx.strokeStyle = 'rgb(0,0,0)';
+	ctx.lineWidth = 50px;
+	//Set the area color
+	ctx.fillStyle = "rgb(0,225,0)";
+	//Draw shape and paint the area
+	ctx.fill();
+} 
+</script>	
+	</head>
+<body>
+	<canvas id="canvas" width="600" height="450"></canvas>
+	<br/>
+	<button type='button' onclick='init();'>Draw</button>
+</body>
+</html>

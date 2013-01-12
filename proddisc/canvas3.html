@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<style>
+		canvas {
+		border: 1px solid black;
+		}
+	</style>
+
+<script>
+//Access rendering context
+function init() {
+	//Get Context
+	var ctx = document.getElementById('canvas').getContext('2d');
+	
+	/* Draw [shape] */
+	/* Draw a filled circle */
+	
+	
+	//Starts the drawing
+	ctx.beginPath();
+	//Draw a filled circle
+	ctx.arc(450,150,100,0,Math.PI*2,true);
+	//Ends the drawing
+	ctx.closePath();
+	//Set the area color
+	ctx.fillStyle = "rgb(0,225,0)";
+	//Draw shape and paint the area
+	ctx.fill();
+} 
+</script>	
+	</head>
+<body>
+	<canvas id="canvas" width="600" height="450"></canvas>
+	<br/>
+	<button type='button' onclick='init();'>Draw</button>
+</body>
+</html>

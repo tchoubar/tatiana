@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<style>
+		canvas {
+		border: 1px solid black;
+		}
+	</style>
+
+<script>
+//Access rendering context
+function init() {
+	//Get Context
+	var ctx = document.getElementById('canvas').getContext('2d');
+	
+	/* Draw [shape] */
+	/* Draw a filled Triangle */
+	
+	
+	//Starts the drawing
+	ctx.beginPath();
+	//Set the starting point
+	ctx.moveTo(200,200);
+	//Draw line from starting point to second point
+	ctx.lineTo(300,400);
+	ctx.lineTo(100,400);
+	//Set the area color
+	ctx.fillStyle = "rgb(0,225,0)";
+	//Draw shape and paint the area
+	ctx.fill();
+} 
+</script>	
+	</head>
+<body>
+	<canvas id="canvas" width="600" height="450"></canvas>
+	<br/>
+	<button type='button' onclick='init();'>Draw</button>
+</body>
+</html>

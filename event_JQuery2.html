@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		padding: 30px;
+	}
+	#orange {
+		width: 300px;
+		background-color: orange;
+	}
+	#green {
+		background-color: limeGreen;
+	}
+	#blue {
+		background-color: cyan;
+		}
+</style>
+<script src="js/jquery-1.8.0.js"></script>
+<script>
+//Create function bundling nested functions to page loading event
+$(document).ready(function() {
+	//Bind Click Event Listener function to element id
+	$('#orange').click(function() {
+		//Create Alert
+		alert("Orange Block was clicked");
+	});
+	$('#green').click(function() {
+		event.stopPropagation();
+		//Create Alert
+		alert("Green Block was clicked");
+	});
+	$('#blue').click(function() {
+		//Create Alert
+		alert("Blue Block was clicked");
+	});
+});	
+</script>
+<script>
+//Create Alert functions 
+	function myBlue() {
+		alert("Blue block was clicked");
+	}
+//Bind Click Event Listeners to elements
+	function addBlueClick() {
+		var blue = document.getElementById("blue");
+		blue.addEventListener("click", myBlue, false);
+	}
+//Bind Click Event Listeners to page loading 
+	window.addEventListener("load", addBlueClick, false); 
+	
+</script>
+</head>
+<body>
+	<div id="orange">
+		<div id="green">
+			<div id="blue">Click here</div>
+		</div>
+	</div>
+</body>
+</html>
